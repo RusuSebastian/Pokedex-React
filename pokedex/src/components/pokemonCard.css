@@ -1,0 +1,112 @@
+* {
+	box-sizing: border-box;
+}
+
+body {
+	background-color: #fff7e8;
+	font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+		"Lucida Sans", Arial, sans-serif;
+}
+.header {
+	padding-left: 10%;
+}
+input {
+	background-image: url(https://img.icons8.com/ios/344/search--v1.png);
+	background-position: 10px;
+	background-repeat: no-repeat;
+	background-size: 28px;
+	border: 1px solid #f5f5f5;
+	border-radius: 10px;
+	color: #4e4d50;
+	font-size: 14px;
+	outline: 0;
+	padding: 17px 17px 17px 50px;
+	width: 315px;
+}
+.pokemonContainer {
+	display: flex;
+	align-items: center;
+	flex-wrap: wrap;
+	justify-content: center;
+	padding: 20px;
+}
+.poke-container {
+	align-items: center;
+	text-transform: capitalize;
+	width: 275px;
+	color: white;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	border-radius: 15px;
+	margin: 20px;
+}
+
+.top-side {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	width: 85%;
+	font-size: 18px;
+}
+.bottom-side {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	width: 90%;
+	padding: 10px;
+}
+img {
+	height: 130px;
+	width: 130px;
+}
+.types {
+	border-radius: 10px;
+	text-align: center;
+	width: 80px;
+}
+.type {
+	background-color: rgba(0, 0, 0, 0.2);
+	border-radius: 5px;
+	padding: 7px;
+	text-align: center;
+	width: 80px;
+}
+.type:first-of-type {
+	margin-bottom: 10px;
+}
+.type.poison {
+	background-color: #8f3a8f;
+	border-radius: 5px;
+	padding: 7px;
+	text-align: center;
+	width: 80px;
+}
+.type.flying {
+	background-color: #9782d8;
+	border-radius: 5px;
+	padding: 7px;
+	text-align: center;
+	width: 80px;
+}
+.type.null {
+	display: none;
+}
+.poke-container.grass {
+	background-color: #78c84f;
+}
+.poke-container.fire {
+	background-color: #f08030;
+}
+.poke-container.water {
+	background-color: #6890f0;
+}
+.poke-container.electric {
+	background-color: #f9d030;
+}
+.poke-container.normal {
+	background-color: #a7a877;
+}
+.poke-container.ghost {
+	background-color: #705998;
+}
