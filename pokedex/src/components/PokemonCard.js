@@ -14,10 +14,8 @@ const styleType=`type ${typeTwo}`;
                 <div className="types">
                     <div className="type">{typeOne}</div>
                     <div className={styleType}>{typeTwo}</div>
-                    
                 </div>
                 <img src={image} alt={name}/>
-                
             </div>
         </div>
     )
