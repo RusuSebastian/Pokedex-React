@@ -29,7 +29,7 @@ function App() {
         />
       </div>
       
-      <div className="pokemonContainer">
+      <div className="pokemonContainer flex-center">
         {allPokemons.filter((pokemon)=>{
           if(searchTerm == ""){
             return pokemon
@@ -37,18 +37,19 @@ function App() {
             return pokemon
           }else if (pokemon.id === (Number(searchTerm))){
             return pokemon 
-          }else if (pokemon.types[0].type.name.includes(searchTerm)){
+          }else if (pokemon.types[0].type.name.includes(searchTerm.toLowerCase())){
             return pokemon
-          }else if (pokemon.types.length === 2 && pokemon.types[1].type.name.includes(searchTerm)){
+          }else if (pokemon.types.length === 2 && pokemon.types[1].type.name.includes(searchTerm.toLowerCase())){
             return pokemon
           }
-        }).map(pokemon =>
+        }).map((pokemon,key) =>
               <PokemonCard
               id={ Number(pokemon.id) < 10 ? `#00${pokemon.id}` : (Number(pokemon.id) < 100 ? `#0${pokemon.id}` :`#${pokemon.id}`) }
               name={ pokemon.name }
               image={ pokemon.sprites.other["official_artwork"]["front_default"] }
               typeOne={ pokemon.types[0].type.name }
               typeTwo={ pokemon.types.length === 2 ? pokemon.types[1].type.name : null }
+              key={key}
               />)}
       </div>
     </>
